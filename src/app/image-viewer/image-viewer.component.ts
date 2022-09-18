@@ -1,15 +1,15 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'bsbo-lightbox',
-  templateUrl: './lightbox.component.html',
-  styleUrls: ['./lightbox.component.css']
+  selector: 'bsbo-image-viewer',
+  templateUrl: './image-viewer.component.html',
+  styleUrls: ['./image-viewer.component.css']
 })
-export class LightboxComponent implements OnInit {
-  @ViewChild('lightbox') lightbox!: ElementRef;
-  @ViewChild('lightboxContainer') lightboxContainer!: ElementRef;
-  @ViewChild('lightboxContent') lightboxContent!: ElementRef;
-  @ViewChild('lightboxImage') lightboxImage!: ElementRef;
+export class ImageViewerComponent implements OnInit {
+  @ViewChild('imageViewer') imageViewer!: ElementRef;
+  @ViewChild('imageViewerContainer') imageViewerContainer!: ElementRef;
+  @ViewChild('imageViewerContent') imageViewerContent!: ElementRef;
+  @ViewChild('imageViewerImage') imageViewerImage!: ElementRef;
 
   currentImage = '';
   currentIndex = 0;
@@ -21,10 +21,10 @@ export class LightboxComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openLightbox(id: number) {
-    this.lightbox.nativeElement.style.display = "flex";
-    this.lightboxContainer.nativeElement.style.display = "flex";
-    this.lightboxContent.nativeElement.style.display = "block";
+  openImageViewer(id: number) {
+    this.imageViewer.nativeElement.style.display = "flex";
+    this.imageViewerContainer.nativeElement.style.display = "flex";
+    this.imageViewerContent.nativeElement.style.display = "block";
     this.currentImage = '';
     this.currentIndex = 0;
     for (let image of this.images) {
@@ -56,10 +56,10 @@ export class LightboxComponent implements OnInit {
     this.currentImage = this.images[this.currentIndex].content;
   }
   
-  closeLightbox() {
-    this.lightbox.nativeElement.style.display = "none";
-    this.lightboxContainer.nativeElement.style.display = "none";
-    this.lightboxContent.nativeElement.style.display = "none";
+  closeImageViewer() {
+    this.imageViewer.nativeElement.style.display = "none";
+    this.imageViewerContainer.nativeElement.style.display = "none";
+    this.imageViewerContent.nativeElement.style.display = "none";
     this.currentImage = '';
   }
 

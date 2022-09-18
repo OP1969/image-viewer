@@ -1,7 +1,7 @@
 <h1>Image Viewer</h1>
 <div id="gallery" class="gallery-container">
-  <div *ngFor="let image of images" class="gallery-tn" (click)="openLightbox(image.id)" >
+  <div *ngFor="let image of images" class="gallery-tn" (click)="openImageViewer(image.id)" >
     <img src="{{image.thumbnail}}" />
   </div>
 </div>
-<bsbo-lightbox #galleryLightbox [images]="images"></bsbo-lightbox>
+<bsbo-image-viewer #galleryImageViewer [images]="images"></bsbo-image-viewer>

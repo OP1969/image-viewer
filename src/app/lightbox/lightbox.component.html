@@ -1,9 +1,0 @@
-<div #lightbox class="lightbox-bg"  (click)="closeLightbox()">
-    <span (click)="closeLightbox()" class="close">&times;</span>
-</div>
-<div #lightboxContainer class="lightbox-container" (click)="closeLightbox()">
-<div #lightboxContent class="lightbox-content"  (click)="$event.stopPropagation();false;">
-    <a class="previous" (click)="showPreviousImage()">&#10094;</a>
-    <img #lightboxImage src="{{currentImage}}" />
-    <a class="next" (click)="showNextImage()">&#10095;</a>
-</div>

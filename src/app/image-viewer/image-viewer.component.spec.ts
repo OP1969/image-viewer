@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LightboxComponent } from './lightbox.component';
+import { ImageViewerComponent } from './image-viewer.component';
 
-describe('LightboxComponent', () => {
-  let component: LightboxComponent;
-  let fixture: ComponentFixture<LightboxComponent>;
+describe('image-viewerComponent', () => {
+  let component: ImageViewerComponent;
+  let fixture: ComponentFixture<ImageViewerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LightboxComponent ]
+      declarations: [ ImageViewerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LightboxComponent);
+    fixture = TestBed.createComponent(ImageViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

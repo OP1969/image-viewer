@@ -1,0 +1,9 @@
+<div #imageViewer class="image-viewer-bg"  (click)="closeImageViewer()">
+    <span (click)="closeImageViewer()" class="close">&times;</span>
+</div>
+<div #imageViewerContainer class="image-viewer-container" (click)="closeImageViewer()">
+<div #imageViewerContent class="image-viewer-content"  (click)="$event.stopPropagation();false;">
+    <a class="previous" (click)="showPreviousImage()">&#10094;</a>
+    <img #imageViewerImage src="{{currentImage}}" />
+    <a class="next" (click)="showNextImage()">&#10095;</a>
+</div>

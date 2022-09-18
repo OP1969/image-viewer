@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { LightboxComponent } from './lightbox/lightbox.component';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { LightboxComponent } from './lightbox/lightbox.component';
 })
 export class AppComponent {
   title = 'ImageViewer Demo';
-  @ViewChild('galleryLightbox') lightbox!: LightboxComponent;
+  @ViewChild('galleryImageViewer') imageViewer!: ImageViewerComponent;
 
   images = [
     {
@@ -50,11 +50,11 @@ export class AppComponent {
     }
   ];
 
-  openLightbox(id: number){
-    this.lightbox.openLightbox(id);
+  openImageViewer(id: number){
+    this.imageViewer.openImageViewer(id);
   }
 
-  closeLightbox(){
-    this.lightbox.closeLightbox();
+  closeimageViewer(){
+    this.imageViewer.closeImageViewer();
   }
 }
