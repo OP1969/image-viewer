@@ -1,0 +1,12 @@
+.gallery-container{
+    width: 90%; 
+    margin: 10px 30px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+}
+
+.gallery-tn{
+    margin: 30px 30px; 
+    max-width: 300px;
+}
